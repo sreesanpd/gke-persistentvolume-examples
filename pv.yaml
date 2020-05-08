@@ -8,5 +8,5 @@ spec:
     accessModes:
     - ReadWriteMany
     nfs: 
-        path: /vol1
-        server: 10.44.163.114
+        path: /GKEvol1/pod1
+        server: 10.90.99.90

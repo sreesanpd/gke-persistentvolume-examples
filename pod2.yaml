@@ -16,3 +16,4 @@ spec:
       volumeMounts:
         - mountPath: "/usr/share/nginx/html"
           name: nginx-pv-storage
+  nodeName: gke-gke-cluster-prod-1-default-pool-57529212-t8tp 
