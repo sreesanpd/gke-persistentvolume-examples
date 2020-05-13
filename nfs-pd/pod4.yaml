@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pv-pod4
+spec:
+  volumes:
+    - name: nginx-pv-storage
+      persistentVolumeClaim:
+        claimName: mypvc
+  containers:
+    - name: nginx-pv-container
+      image: nginx
+      ports:
+        - containerPort: 80
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: nginx-pv-storage
+  nodeName: gke-gke-cluster-prod-1-default-pool-2fb6c3ac-wdpg
+          #  nodeName: gke-gke-cluster-prod-1-default-pool-6b50952d-511n
